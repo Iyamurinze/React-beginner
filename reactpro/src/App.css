@@ -1,66 +1,135 @@
-
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   font-family: inter, sans-serif;
-  background-color: #282d35;
-  height: 100vh;
-  color: white;
+  background-color: #f6f7fa;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.nav{
+
+header .dark{
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #21222a;
-  height: 90px;
-  padding: 30px 25px;
+  padding: 25px 15px;
 }
 
-nav > h3, nav > p{
+header .light{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #808182;
+  padding: 25px 15px;
+}
+
+.light .toggle--slider{
+  color: #21222a;
+  padding: 12px;
+}
+.dark .toggle--slider{
+  color: #c9cfd5;
+  padding: 12px;
+}
+
+header .toggler{
+  display: flex;
+}
+
+.light .toggle---light{
+  color: #21222a;
+}
+
+.light .toggle--dark{
+  color: #21222a;
+}
+.dark .toggle--dark{
+  color: #DEEBF8;
+}
+
+.dark .toggle---light{
+  color: #DEEBF8;
+}
+nav > h3, nav > p {
   margin: 0;
 }
 
-nav > h3{
+nav > h3 {
   margin-right: auto;
   color: #61dafb;
   font-size: x-large;
 }
-nav > p{
-  color: #DEEBF8;
-} 
 
-main{
-  padding: 50px 20px;
-  background-image: url(./assets/img.png);
-  background-repeat: no-repeat;
-  background-position: right 75%;
+nav > p {
+  color: #DEEBF8;
 }
 
-.main-title{
+main {
+  padding: 50px 20px;
+  background-image: url(./componets/img.png);
+  background-repeat: no-repeat;
+  background-position: right 75%;
+  transition: background-color 0.3s;
+}
+
+main .light{
+  padding: 50px 20px;
+  background-image: url(./componets/img2.png);
+  background-repeat: no-repeat;
+  background-position: right 75%;
+  transition: background-color 0.3s;
+  background-color: #c9cfd5;
+}
+
+.main-title {
   font-size: 35px;
   letter-spacing: -0.05em;
 }
 
-.main-fact{
+.main-fact {
   margin-top: 46px;
   max-width: 400px;
 }
 
-.main-fact > li{
-line-height: 19px;
-padding-block: 10px; 
+.main-fact > li {
+  line-height: 19px;
+  padding-block: 10px;
 }
 
-.main-fact > li::marker{
+.main-fact > li::marker {
   font-size: 1.4rem;
   color: #61dafb;
 }
 
+/* DARK MODE */
+.dark body {
+  background-color: #282d35;
+  color: white;
+}
 
+.dark header {
+  background-color: #21222a;
+}
 
+.dark main {
+  background-color: #282d35;
+  color: white;
+}
 
+/* LIGHT MODE */
+.light body {
+  background-color: #f5f5f5;
+  color: black;
+}
 
+.light header {
+  background-color: #ffffff;
+}
+
+.light main {
+  background-color: #f5f5f5;
+  color: black;
+}
